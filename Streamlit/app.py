@@ -1,7 +1,23 @@
+import os
 import streamlit as st
 import pandas as pd
 from predict import predict_transaction
+# -------------------------
+# Dataset Path
+# -------------------------
 
+CURRENT_DIR = os.path.dirname(__file__)
+
+BASE_DIR = os.path.dirname(CURRENT_DIR)
+
+DATA_PATH = os.path.join(
+    BASE_DIR,
+    "data",
+    "Synthetic_Transaction_Risk_Dataset.xlsx"
+)
+@st.cache_data
+def load_data():
+    return pd.read_excel(DATA_PATH)
 # -------------------------
 # Page Configuration
 # -------------------------
@@ -372,7 +388,7 @@ elif page == "📊 Business Insights":
         "Model",
         "Random Forest"
     )
-    df = pd.read_excel(r"C:\Users\Harsh\Transaction_Risk_Prioritization_System\data\Synthetic_Transaction_Risk_Dataset.xlsx")
+    df = load_data()
     st.subheader("Fraud Distribution")
 
     fraud_counts = df["IsFraud"].value_counts()
