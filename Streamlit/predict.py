@@ -14,10 +14,10 @@ CURRENT_DIR = os.path.dirname(__file__)
 BASE_DIR = os.path.dirname(CURRENT_DIR)
 
 # Path of model
-MODEL_PATH = os.path.join(BASE_DIR, "models", "fraud_model.pkl")
+MODEL_PATH = os.path.join(BASE_DIR, "Models", "fraud_model.pkl")
 
 # Path of feature columns
-FEATURE_PATH = os.path.join(BASE_DIR, "models", "feature_columns.pkl")
+FEATURE_PATH = os.path.join(BASE_DIR, "Models", "feature_columns.pkl")
 
 # Load trained Random Forest model
 model = joblib.load(MODEL_PATH)
