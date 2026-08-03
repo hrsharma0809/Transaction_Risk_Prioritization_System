@@ -298,10 +298,6 @@ Interested in:
 - Fraud Analytics
 - Financial Risk Analytics
 
-### Connect with me
-
-- LinkedIn: *(Add your profile link)*
-- GitHub: *(Add your GitHub profile link)*
 
 ---
 
